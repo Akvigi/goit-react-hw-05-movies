@@ -21,10 +21,10 @@ const Reviews = () => {
   }, [movieId])
   
   return (
-    <ul>
+    <List>
       <h1>Reviews</h1>
       {reviews.length !== 0 ? reviews.map(({ author, content, id }) => (<Item key={id}><h3>{author}</h3><p>{content}</p></Item>)) : <p>Havent reviews yet</p>}
-    </ul>
+    </List>
   )
 }
 
@@ -35,4 +35,8 @@ export default Reviews
 const Item = styled.li`
   display: flex;
   flex-direction: column;
+`
+
+const List = styled.ul`
+  padding: 2% 5%;
 `
